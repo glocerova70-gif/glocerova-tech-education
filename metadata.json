@@ -1,0 +1,8 @@
+
+{
+  "name": "GLOCEROVA - Educación Tecnológica",
+  "description": "Plataforma educativa para la enseñanza de tecnología a niños en Colombia, con asistente de voz Glory.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
