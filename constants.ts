@@ -28,7 +28,7 @@ export const SLIDES: Record<Section, SlideData> = {
         title: "Base Científica",
         subtitle: "Evidencia y Rigor Académico",
         description: "Nos apoyamos en investigaciones globales sobre Alfabetización Digital y el uso intencional de la tecnología en la primera infancia. Aplicamos modelos de 'Minds-on Learning' para asegurar un desarrollo cognitivo óptimo.",
-        imageUrl: "https://images.unsplash.com/photo-1491841573634-28140fc7ced7?auto=format&fit=crop&q=80&w=1920",
+        imageUrl: "https://bzsviqfepwwqbpiivpjr.supabase.co/storage/v1/object/public/Imagenes/WhatsApp%20Image%202026-02-05%20at%2021.21.30.jpeg",
         ctaText: "Ver Investigaciones",
         researchLinks: [
             { title: "Alfabetización Digital: Pereira et al.", link: "#" },
@@ -48,7 +48,7 @@ export const SLIDES: Record<Section, SlideData> = {
         title: "Únete al Cambio",
         subtitle: "Conecta desde el Exterior",
         description: "Si estás fuera de Colombia, tu apoyo es vital. Apadrina un estudiante, dona equipos o conviértete en mentor remoto. Construyamos el futuro juntos.",
-        imageUrl: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&q=80&w=1920",
+        imageUrl: "/IMG_20230611_115254774~2.jpg",
         ctaText: "Contáctanos Hoy"
     }
 };
