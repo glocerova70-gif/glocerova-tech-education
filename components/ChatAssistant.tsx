@@ -35,7 +35,7 @@ const ChatAssistant: React.FC = () => {
         setIsThinking(true);
 
         const modelMsgId = (Date.now() + 1).toString();
-        
+
         setMessages(prev => [...prev, {
             id: modelMsgId,
             role: 'model',
@@ -47,9 +47,9 @@ const ChatAssistant: React.FC = () => {
 
         await sendMessageStream(userMsg.text, (chunk) => {
             accumulatedText += chunk;
-            setMessages(prev => prev.map(msg => 
-                msg.id === modelMsgId 
-                    ? { ...msg, text: accumulatedText, isLoading: false } 
+            setMessages(prev => prev.map(msg =>
+                msg.id === modelMsgId
+                    ? { ...msg, text: accumulatedText, isLoading: false }
                     : msg
             ));
         });

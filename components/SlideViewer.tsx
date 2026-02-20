@@ -44,7 +44,7 @@ const SlideViewer: React.FC<SlideViewerProps> = ({ currentSection, onSectionChan
                         className={`absolute inset-0 w-full h-full object-cover transition-transform duration-[2500ms] ease-out ${loaded ? 'scale-105' : 'scale-110'}`}
                     />
                 ) : (
-                    <div 
+                    <div
                         className={`absolute inset-0 bg-cover bg-center transition-transform duration-[2500ms] ease-out ${loaded ? 'scale-105' : 'scale-110'}`}
                         style={{ backgroundImage: `url(${slide.imageUrl})` }}
                     />
@@ -62,13 +62,13 @@ const SlideViewer: React.FC<SlideViewerProps> = ({ currentSection, onSectionChan
                     <p className="text-slate-300 text-lg md:text-xl max-w-2xl mb-12 leading-relaxed font-light">
                         {slide.description}
                     </p>
-                    
+
                     <div className="flex flex-wrap gap-5">
                         <button onClick={handleNext} className="group flex items-center gap-4 bg-white text-glocerova-dark px-10 py-5 rounded-full font-bold hover:bg-glocerova-gold transition-all duration-500 shadow-xl hover:shadow-glocerova-gold/20">
                             {slide.ctaText}
                             <ArrowRight size={20} className="group-hover:translate-x-2 transition-transform" />
                         </button>
-                        
+
                         {slide.researchLinks && (
                             <div className="flex gap-4">
                                 {slide.researchLinks.map((res, i) => (
@@ -91,28 +91,29 @@ const SlideViewer: React.FC<SlideViewerProps> = ({ currentSection, onSectionChan
             </div>
 
             {/* Navigation Controls */}
-            <div className="absolute bottom-12 right-8 md:right-20 flex gap-4 z-20">
-                <button onClick={handlePrev} className="group p-5 rounded-full border border-white/10 text-white hover:bg-white hover:text-glocerova-dark backdrop-blur-md transition-all duration-500">
-                    <ChevronLeft size={24} />
-                </button>
-                <button onClick={handleNext} className="group p-5 rounded-full bg-white text-glocerova-dark hover:bg-glocerova-gold transition-all duration-500 shadow-2xl">
-                    <ChevronRight size={24} />
-                </button>
-            </div>
-
-            <div className="absolute bottom-12 left-8 md:left-20 flex items-center gap-4 z-20">
+            <div className="absolute bottom-12 left-8 md:left-20 flex items-center gap-6 z-20">
                 <div className="flex gap-2">
                     {sections.map((s, idx) => (
-                        <button 
-                            key={s} 
-                            onClick={() => onSectionChange(s)} 
-                            className={`h-1 transition-all duration-700 rounded-full ${s === currentSection ? 'w-16 bg-glocerova-gold' : 'w-4 bg-white/20 hover:bg-white/40'}`} 
+                        <button
+                            key={s}
+                            onClick={() => onSectionChange(s)}
+                            className={`h-1 transition-all duration-700 rounded-full ${s === currentSection ? 'w-16 bg-glocerova-gold' : 'w-4 bg-white/20 hover:bg-white/40'}`}
                         />
                     ))}
                 </div>
-                <span className="text-white/40 font-mono text-xs tracking-tighter ml-4">EXPLORAR GLOCEROVA</span>
+
+                <div className="flex gap-3 ml-4">
+                    <button onClick={handlePrev} className="group p-3 rounded-full border border-white/10 text-white hover:bg-white hover:text-glocerova-dark backdrop-blur-md transition-all duration-500">
+                        <ChevronLeft size={20} />
+                    </button>
+                    <button onClick={handleNext} className="group p-3 rounded-full bg-white text-glocerova-dark hover:bg-glocerova-gold transition-all duration-500 shadow-2xl">
+                        <ChevronRight size={20} />
+                    </button>
+                </div>
+
+                <span className="hidden sm:inline text-white/40 font-mono text-[10px] tracking-widest ml-2 uppercase">Navegar</span>
             </div>
-            
+
             <div className="absolute top-12 right-8 md:right-20 text-white/20 font-mono text-4xl font-black z-20 select-none">
                 0{slide.id} <span className="text-[10px] align-top mt-2 inline-block font-bold">/ 05</span>
             </div>

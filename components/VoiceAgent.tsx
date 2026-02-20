@@ -183,7 +183,7 @@ const VoiceAgent: React.FC = () => {
   };
 
   return (
-    <div className="fixed bottom-6 right-24 z-50 flex flex-col items-end pointer-events-none">
+    <div className="fixed bottom-24 right-6 z-50 flex flex-col items-end pointer-events-none">
       {isActive && (
         <div className="bg-glocerova-dark/95 backdrop-blur-xl pointer-events-auto rounded-3xl shadow-2xl w-72 p-6 flex flex-col items-center border border-white/20 mb-4 animate-in zoom-in duration-300">
           <div className="relative mb-6">
